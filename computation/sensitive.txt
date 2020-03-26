@@ -1,0 +1,41 @@
+Chomsky Hierarchy
+  Regular languages
+  Context-free languages
+  Context-sensitive languages
+    C
+  Turing-equivalent systems
+  Undecidable problems
+    Parsing perl
+    Halting problem
+    Function equivalent problem
+
+Idris (totality checker -- halting detector)
+
+def maybe_halts(f):
+  pass
+
+def maybe_parse_perl(string):
+  pass
+
+a*b*
+a{n}b{n}
+a{n}b{n}c{n}
+
+1. S     = ''
+2. S     = 'a' S B C
+3. C B   = B C
+4. 'a' B = 'a' 'b'
+5. 'b' B = 'b' 'b'
+6. 'b' C = 'b' 'c'
+7. 'c' C = 'c' 'c'
+
+"aabbc"
+
+S
+'a' S B C
+'a' 'a' S B C B C
+'a' 'a' B C B C
+'a' 'a' B B C C
+'a' 'a' 'b' 'b' C C
+'a' 'a' 'b' 'b' 'c' C
+'a' 'a' 'b' 'b' 'c' 'c'

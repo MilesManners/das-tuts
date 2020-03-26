@@ -1,0 +1,14 @@
+{
+  "name": "das-tuts",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "@types/jest": "^24.0.12",
+    "jscrewit": "^2.9.6"
+  }
+}

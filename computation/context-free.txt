@@ -1,0 +1,55 @@
+Chomsky Hierarchy
+  Regular languages
+  Context-free languages
+    Lua, Python, Lisps
+    context-free grammars (CFGs), push-down automaton
+  ...
+  Turing-equivalent (CPUS, TM, LC)
+
+()
+(())
+((()))
+
+S = ''
+S = '(' S ')'
+
+            S
+        '(' S ')'
+    '(' '(' S ')' ')'
+'(' '(' '(' '' ')' ')' ')'
+
+RULE1 = '1'
+RULE1 = '2' RULE2
+
+
+function f() return 1 end
+
+function
+f
+(
+)
+return
+1
+end
+
+stat
+  'function'
+  funcname
+    dottedname
+      NAME ('f')
+  funcbody
+    params
+      '('
+      parlist
+        ''
+      ')'
+    block
+      ...
+    'end'
+
+function f() ... end
+
+lexing (lexical analysis, tokenization): code -> series of tokens
+
+lua: lex (regular) -> parse (context-free)
+python: lex (context-sensitive) -> parse (context-free)

@@ -1,0 +1,34 @@
+a*b*(a|b)*
+
+REGEX = REGEX '*'
+REGEX = REGEX '|' REGEX
+REGEX = '(' REGEX ')'
+REGEX = REGEX REGEX
+REGEX = 'a'
+REGEX = 'b'
+...
+
+GRAMMAR = DEF
+GRAMMAR = DEF GRAMMAR
+DEF = SYMBOL '=' RHS '\n'
+RHS = SYMBOL
+RHS = LITERAL
+RHS = SYMBOL RHS
+RHS = LITERAL RHS
+SYMBOL = CHAR
+SYMBOL = CHAR SYMBOL
+LITERAL = ''' CHAR '''
+CHAR = 'a'
+CHAR = 'b'
+...
+
+--------------------------------------------------------------
+
+Turing machine & lambda calculus (1930s)
+
+Imperative programming & functional programming
+
+Turing machine:
+  Large memory (tape) + CPU
+Modern computer:
+  Large memory + CPU (fast) + memory bus (slow)
